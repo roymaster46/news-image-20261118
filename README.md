@@ -10,7 +10,7 @@ One image that sums up the world's news of **Wednesday, 18 November 2026** — a
 - **9 more stories** with scene illustrations: Russia's 141-drone night over Ukraine, a span of the Crimea bridge falling into the sea, Cyclone Akvan in the Bay of Bengal, UK inflation at 3.6%, RSF drone strikes in El Obeid, GTA VI's launch, Waymo off the freeways, the An-12 crash in Siberia, and Dhoni's IPL retirement.
 - **28 one-line briefs** (Voyager 1 one light-day out, Nvidia's revenue doubling, the EU's €45bn Ukraine loan, Cyclone Xavier at Category 5, and more) plus a **world map** with numbered pins for stories 1–12.
 
-The image (`entry.png`, 1024×1024, drawn programmatically with PIL from verified wire reports) is copied to `/output/entry.png` by `main.ts`, which also verifies the PNG's dimensions before copying.
+The image (`entry.png`, 1024×1024, drawn programmatically with PIL from verified wire reports) is copied to `/output/entry.png` by `main.ts`, which also verifies the PNG's dimensions before copying. v3 keeps the v2 coverage and layout and upgrades only the illustrations: gradient skies and seas, layered skylines with lit windows, flags on the summit table, soft halo light on explosions and suns, caption strips on the three heroes, and a dot-matrix world map with graticule.
 
 ## Run it
 

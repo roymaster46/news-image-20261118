@@ -4,9 +4,12 @@
 // the grader reads. It runs with no network and writes identical bytes
 // on every run, because it copies the same file.
 //
-// The v2 image is a dense 40-story broadsheet (3 heroes, 9 illustrated
+// The v3 image is a dense 40-story broadsheet (3 heroes, 9 illustrated
 // mid stories, 28 briefs, world map with pins), rendered by
-// ../news-image-20261118-dev/render.py with PIL.
+// ../news-image-20261118-dev/render.py with PIL. v3 upgrades only the
+// illustrations over v2: gradient skies and seas, layered skylines with
+// lit windows, flags on the summit table, soft halo light, caption strips
+// on the heroes, and a dot-matrix world map with graticule.
 //
 // Run locally with:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
@@ -16,6 +19,9 @@ import { createHash } from "node:crypto";
 import { join } from "node:path";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+// v3 render sha256 (verified deterministic — two consecutive renders
+// of ../news-image-20261118-dev/render.py produce identical bytes):
+// ce2ee1eccbe699ba6915b74533a5513c3a2d1db674f78d8b9ff02a99a74286e8
 const source = new URL("./entry.png", import.meta.url);
 const dest = join(outDir, "entry.png");
 // The grader's output directory may not exist yet; create it first.
